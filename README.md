@@ -1,22 +1,24 @@
 # Basic_Twitter_Sentiment_Analysis
 
-In this tutorial, we shall perform sentiment analysis on tweets using either **TextBlob** and **NLTK**, before classifying them as either positive/neutral/negative. You may wish to compare the accuracy of your results from the two different modules and select the one that best suits your needs. I shall be using the (https://www.kaggle.com/crowdflower/twitter-airline-sentiment "US airline tweets") dataset which can be downloaded from Kaggle. This dataset originates from the *Crowdflower's Data for Everyone library*.
+In this tutorial, we shall perform sentiment analysis on tweets using **TextBlob** and **NLTK**, before classifying them as either positive/neutral/negative. You may wish to compare the accuracy of your results from the two modules and select the one that you prefer. 
 
-IMPORTANT: The sentiment analysis we shall be performing here is only at the basic level and it serves as a starting point for users who are new to Natural Language Processing. For more accurate industrial applications, I'd recommend checking out (https://spacy.io/ "spacy") or (https://opennlp.apache.org/ "Apache OpenNLP").
+I shall be using the [US airline tweets](https://www.kaggle.com/crowdflower/twitter-airline-sentiment) dataset which can be downloaded from Kaggle. This dataset originates from the *Crowdflower's Data for Everyone library*.
+
+**IMPORTANT**: The sentiment analysis we shall be performing here is at the basic level and it serves as a starting point to those who are new to Natural Language Processing. For more accurate industrial applications, I'd recommend checking out [Spacy](https://spacy.io/) or [Apache OpenNLP](https://opennlp.apache.org/).
+
 
 ## Installation:
 
 #### Modules required:
-* beautifulsoup4 (BeautifulSoup)
-* nltk (Python's NLTK)
-* textblob (TextBlob)
-//Vader lexicon, wordnet, punkt
+* beautifulsoup4
+* nltk
+* textblob
 
 For your convenience, I have attached a *requirements.txt* file containing the modules to install. Simply execute `pip install -r requirements.txt` on your console (after setting the directory path to this project's folder) to install the modules. 
 
 Next, we need to install specific NLTK modules. To do this, open your Python shell and execute `import nltk`. Then, execute `nltk.download()`. The NLTK installer will appear. Select *punkt*, *vader_lexicon* and *wordnet* under "All Packages" and click "Download". You may then close the installer once the download completes.
 
-### Executing the script:
+### Executing the script
 
 Overview of what each file does:
 README.txt --> Information about the folder and everything in it.
