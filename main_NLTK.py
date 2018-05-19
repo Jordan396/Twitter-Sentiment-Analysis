@@ -1,11 +1,10 @@
 '''
-Python 3.6
+Python 3.6, Python NLTK module
 
-This file contains the code required to test the various NLTK models listed below.
+This file contains the code required to test the various models under the Python NLTK module.
 The results will be written into their individual output file in a CSV format.
 
-NOTE: The models below clean the text first before performing their sentiment analysis.
-
+Instructions to execute the file can be found at the bottom of the file.
 '''
 import csv
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -24,8 +23,8 @@ def NLTKCleanRaw():
 	tweet_counter = 0
 	with open("results_nltk_raw.txt","w", encoding = "utf-8") as postresults:
 		newWriter = csv.writer(postresults, delimiter='\t', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-		with open("raw_twitter.txt","r", encoding = "utf-8") as raw_tweets:
-			for line in raw_tweets.readlines():
+		with open("raw_twitter.txt","r", encoding = "utf-8") as postprocessed:
+			for line in postprocessed.readlines():
 				total_score = 0
 				tweet_counter += 1
 				
@@ -140,7 +139,7 @@ def NLTKCleanEmoji():
 				
 def NLTKCleanAbbrevEmoji():
 	"""
-	NLTK model with extended abbreviations and emoticon scoring
+	NLTK model with extended abbreviations AND emoticon scoring
 	"""
 	tweet_counter = 0
 	tweetProcesser.abbreviation_extender()
@@ -184,13 +183,24 @@ def NLTKCleanAbbrevEmoji():
 					
 					
 print("====================TEST BEGIN=======================")
+
 '''
-To test a model, simply uncomment any of the model names below and run this script in your python command shell.
+BASIC: This is the main function we will be executing.
+It combines all the cleaning and processing steps described in the GitHub README.
+Run this script in your python command shell.
 '''
+NLTKCleanAbbrevEmoji()
+'''
+ADVANCED: Sometimes, performing excessive cleaning operations on the input may worsen the accuracy of the model.
+Hence, here are several other models you may wish to test for accuracy comparison. 
+The description of the models may be found under the individual functions above.
+To test a model, simply comment the above "Basic" model and uncomment any of the models below. 
+Run this script in your python command shell.
+'''
+
 #NLTKCleanRaw()
 #NLTKCleanAbbrev()
 #NLTKCleanEmoji()
-#NLTKCleanAbbrevEmoji()
 
 print("====================TEST END=========================")
 					
