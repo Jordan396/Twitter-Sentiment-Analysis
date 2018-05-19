@@ -1,7 +1,7 @@
 '''
-Python 3.6, Python NLTK module
+Python 3.6, Python NLTK model
 
-This file contains the code required to test the various models under the Python NLTK module.
+This file contains the code required to test the various models under the Python NLTK model.
 The results will be written into their individual output file in a CSV format.
 
 Instructions to execute the file can be found at the bottom of the file.
