@@ -1,4 +1,4 @@
-# Basic_Twitter_Sentiment_Analysis
+# Twitter_Sentiment_Analysis
 ### Overview
 In this tutorial, we shall perform sentiment analysis on tweets using **TextBlob** and **NLTK**. You may wish to compare the accuracy of your results from the two modules and select the one you prefer. I shall be using the [US airline tweets](https://www.kaggle.com/crowdflower/twitter-airline-sentiment) dataset which can be downloaded from Kaggle. This dataset originates from the *Crowdflower's Data for Everyone library*.
 
