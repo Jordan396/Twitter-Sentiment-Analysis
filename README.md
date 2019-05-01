@@ -5,18 +5,7 @@ In this tutorial, we shall perform sentiment analysis on tweets using **TextBlob
 **IMPORTANT:** The sentiment analysis performed here is rather basic and it serves as a starting point for those new to Natural Language Processing. For more accurate industrial applications, I'd recommend checking out [Spacy](https://spacy.io/) or [Apache OpenNLP](https://opennlp.apache.org/).
 
 #### Overview of what each file does:
-| File                       | Description                                           |
-| :-------------------------:|:----------------------------------------------------- |
-| README.txt                 |Information about this repository                      |
-| raw_twitter.txt            |Contains the raw dataset of tweets                     |
-| abbreviations_match.txt    |Abbreviations and the words they represent             |
-| stopwords.txt              |List of common english stopwords                       |
-| tweetCleaner.py            |Contains functions to clean the twitter text           |
-| tweetProcesser.py          |Contains functions to process the twitter text         |
-| Compiled_Results.xlxs      |Compiled results of running the scripts                |
-| main_NLTK.py               |Contains the NLTK models                               |
-| main_TextBlob.py           |Contains the TextBlob models                           |
-
+!["Basic file description"](./img/basic-file-desc.png)
 
 #### Concepts
 At a high level the sentiment analysis will involve 4 steps:
@@ -54,11 +43,7 @@ For both models, two output files will be generated. "abbreviations_twitter.txt"
 If you'd like to explore improving the accuracy of the above models, then this advanced portion is for you.
 
 #### Changing Cleaning Parameters
-| File                       | Description                                                                                                                                                                     |
-| :-------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| abbreviations_match.txt    |Add/Remove abbreviations depending on the context of your dataset. For example, while "adv" may mean "advocate" for airlines, it may mean "advance" in the context of a war game.|
-| stopwords.txt              |Add/Remove stopwords                                                                                                                                                             |
-| tweetProcesser.py          |Add/Remove emoticons. The emoticons I have considered in this file is not exhaustive, so do add on if you encounter more!                                                        |
+!["Advanced file description"](./img/advanced-file-desc.png)
 
 #### Testing models at various stages of cleaning
 Sometimes, performing excessive cleaning operations on the input may worsen the accuracy of the model. Therefore, I have included several models for testing at the various stages of cleaning. Detailed instructions can be found at the bottom of the *main_NLTK.py* and *main_TextBlob.py* files.
